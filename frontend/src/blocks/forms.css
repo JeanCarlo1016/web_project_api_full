@@ -1,0 +1,41 @@
+.form__container {
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 358px;
+    gap: 20px;
+    margin-top: 60px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form__content-fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 100%;
+    gap: 30px;
+    color: #CCCCCC;
+    font-size: 14px;
+}
+
+.form__input {
+    background-color: transparent;
+    color: #CCCCCC;
+    border: none;
+    border-bottom: solid 1px #CCCCCC;
+    padding-bottom: 10px;
+}
+
+.form__button-save {
+    margin-top: 216px;
+    height: 40px;
+}
+
+.form__link {
+    align-self: center;
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,24 @@
+.input-error {
+  border-color: red;
+}
+
+.error {
+  display: none;
+  color: red;
+  font-size: 12px;
+}
+
+.error-visible {
+  display: block;
+}
+
+.popup__button_disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.popup__input {
+  border: none;
+  border-bottom: solid;
+  border-width: thin;
+}
