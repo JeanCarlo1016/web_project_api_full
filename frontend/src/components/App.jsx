@@ -46,7 +46,7 @@ function App() {
     try {
       const token = getToken();
       if (token) {
-        const userData = await getUserData(token);
+        const userData = await getUser(token);
         setAuthUser(userData);
         setIsLoggedIn(true);
       }
@@ -79,7 +79,6 @@ function App() {
         setShowRegisterPopup(true);
         setTimeout(() => setShowRegisterPopup(false), 3000); // 3 segundos
       } else {
-        // Esto normalmente no se ejecutará porque signUp lanza error si no es 2xx
         setRegisterPopupMessage("Registro no completado. Inténtalo más tarde.");
       }
     } catch (err) {
@@ -98,7 +97,7 @@ function App() {
       if (res?.token) {
         setToken(res.token);
         const userData = await getUser(res.token);
-        setAuthUser(userData.data);
+        setAuthUser(userData);
         setIsLoggedIn(true);
         navigate("/");
       }

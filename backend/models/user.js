@@ -6,19 +6,19 @@ const emailRegex = /^\S+@\S+\.\S+$/;
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
+    required: false,
     minlength: 2,
     maxlength: 30,
   },
   about: {
     type: String,
-    required: true,
+    required: false,
     minlength: 2,
     maxlength: 30
   },
   avatar: {
     type: String,
-    required: true,
+    required: false,
     validate: {
       validator: function (v) {
         return avatarUrlRegex.test(v);

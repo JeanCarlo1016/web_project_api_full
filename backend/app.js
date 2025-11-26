@@ -1,24 +1,22 @@
 const express = require('express');
-const usersRoutes = require('./backend/routes/users');
-const cardsRoutes = require('./backend/routes/cards');
-const authRoutes = require('./backend/routes/auth');
+const usersRoutes = require('./routes/users');
+const cardsRoutes = require('./routes/cards');
+const authRoutes = require('./routes/auth');
 
-const authMiddleware = require('./backend/middleware/auth');
+const authMiddleware = require('./middleware/auth');
 
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
-const PORT = 3000;
-
-
-// 1. Middleware globales
+const PORT = 3001;
 
 
 // Necesario para permitir solicitudes desde tu frontend React
 app.use(cors({
-  origin: "http://localhost:5173", // <-- puerto Vite
+  origin: "http://localhost:5173",
   credentials: true
 }));
+
 
 // Parseo de JSON
 app.use(express.json());

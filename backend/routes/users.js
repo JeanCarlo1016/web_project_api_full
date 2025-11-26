@@ -4,15 +4,20 @@ const router = express.Router();
 const {
   getAllUsers,
   getUserById,
-  createUser,
   updateProfile,
   updateAvatar
 } = require('../controllers/users');
 
-router.get('/', getAllUsers);           // GET /users
-router.get('/me', getUserById);         // GET /users/me
-router.patch('/me', updateProfile);     // PATCH /users/me
-router.patch('/avatar', updateAvatar);  // PATCH /users/avatar
+// GET /users
+router.get('/', getAllUsers);
 
+// GET /users/me
+router.get('/me', getUserById);
+
+// PATCH /users/me
+router.patch('/me', updateProfile);
+
+// PATCH /users/avatar
+router.patch('/avatar', updateAvatar);
 
 module.exports = router;
