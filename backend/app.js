@@ -8,7 +8,7 @@ const authMiddleware = require('./middleware/auth');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 
 // Necesario para permitir solicitudes desde tu frontend React
