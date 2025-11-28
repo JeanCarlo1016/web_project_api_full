@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "scp -r -i path/to/ssh/key ./dist/* jeanca101699@jccytwo.chickenkiller.com:/home/jeanca101699/frontEnd"
   },
   "dependencies": {
     "react": "^18.3.1",
