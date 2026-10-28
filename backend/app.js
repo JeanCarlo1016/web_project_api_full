@@ -13,7 +13,7 @@ const PORT = 3000;
 
 // Necesario para permitir solicitudes desde tu frontend React
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://www.jccytwo.chickenkiller.com",
   credentials: true
 }));
 
